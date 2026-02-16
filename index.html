@@ -781,7 +781,7 @@ function buildSections(){
       (nextId ? '<a onclick="navigateTo(\'' + nextId + '\')">\u203a</a>' : '<a class="nav-disabled">\u203a</a>') +
       '</div><div class="page-number">' + (i+1) + ' / ' + SECTIONS.length + '</div>';
     var bottomNav = nextId ?
-      '<div style="text-align:center;padding:1rem 0"><a onclick="navigateTo(\'' + nextId + '\')" style="font-family:Patrick Hand,cursive;font-size:1.15rem;color:#8a7a6a;cursor:pointer;text-decoration:none">next: ' + SECTIONS[i+1].label + ' \u2192</a></div>' :
+      '<div style="text-align:center;padding:1rem 0"><a onclick="navigateTo(\'' + nextId + '\')" style="font-family:Patrick Hand,cursive;font-size:1.15rem;color:#8a7a6a;cursor:pointer;text-decoration:none">' + SECTIONS[i+1].label + ' \u2192</a></div>' :
       '<div style="text-align:center;padding:1rem 0;font-family:Caveat,cursive;font-size:1.2rem;color:#b09878">\u2743 You\u2019ve reached the last page! \u2743<br><a onclick="navigateTo(\'index\')" style="font-family:Patrick Hand,cursive;font-size:1.05rem;color:#8a7a6a;cursor:pointer;text-decoration:none">\u2190 back to contents</a></div>';
     div.innerHTML = '<div class="section active">' + navHtml +
       '<div class="section-header"><span class="section-icon">'+s.icon+'</span><span class="section-title">'+s.label+'</span></div>'+
