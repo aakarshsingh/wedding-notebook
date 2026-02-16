@@ -550,7 +550,7 @@ function renderEvents(){
     day.events.forEach(function(e){
       h+='<li class="timeline-event"><div class="event-name">'+e.name+'</div>';
       h+='<div class="event-detail">\u23f0 '+e.time+'</div>';
-      h+='<div style="margin-top:0.5rem"><a href="'+e.mapLink+'" target="_blank" class="card-tag" style="text-decoration:none">\u23f0 '+e.address+'</a></div></div>';
+      h+='<div class="event-detail"><a href="'+e.mapLink+'" target="_blank" class="card-tag" style="text-decoration:none">\u23f0 '+e.address+'</a></div></div>';
       if(e.dress)h+='<div class="event-detail">\ud83d\udc57 '+e.dress+'</div>';
       if(e.notes)h+='<div class="note" style="margin-top:0.4rem"><span class="note-label">Note:</span> '+e.notes+'</div>';
       h+='</li>';
