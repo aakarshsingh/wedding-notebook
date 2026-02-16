@@ -509,8 +509,7 @@ var SECTIONS = [
   { id:"shop",      icon:"\ud83d\udecd\ufe0f", label:"Places to Shop",          render:renderPlacesToShop },
   { id:"etiquette", icon:"\ud83d\ude4f", label:"Gurudwara Etiquettes",    render:renderEtiquettes },
   { id:"mustdo",    icon:"\u2728",       label:"Must Dos in Delhi",       render:renderMustDo },
-  { id:"musteat",   icon:"\ud83e\udd24", label:"Must Eat in Delhi",       render:renderMustEat },
-  { id:"eat",       icon:"\ud83c\udf5c", label:"Nearby Places to Eat",    render:renderPlacesToEat },
+  { id:"food",      icon:"\ud83c\udf5c", label:"Places to Eat",           render:renderFood },
   { id:"salons",    icon:"\ud83d\udc87", label:"Beauty Salons Nearby",    render:renderSalons },
   { id:"lastpage",  icon:"\ud83d\udc9b", label:"One Last Thing...",        render:renderLastPage }
 ];
@@ -580,8 +579,16 @@ function renderPlaceCards(items,showRating){
 }
 function renderPlacesToEat(){return renderPlaceCards(DATA.placesToEat)}
 function renderPlacesToShop(){return renderPlaceCards(DATA.placesToShop,false)}
+function renderFood(){
+  var html = '<div style="font-family:Caveat,cursive;font-size:1.4rem;font-weight:700;color:#4a3728;margin-bottom:0.6rem">\ud83d\udccd Near the Hotel</div>';
+  html += renderPlaceCards(DATA.placesToEat);
+  html += '<div class="doodle-divider">~ \u2743 ~</div>';
+  html += '<div style="font-family:Caveat,cursive;font-size:1.4rem;font-weight:700;color:#4a3728;margin-bottom:0.6rem">\ud83c\udf1f Must Eat in Delhi</div>';
+  html += renderPlaceCards(DATA.mustEat, false);
+  html += '<div class="note"><span class="note-label">Foodie note:</span> Chandni Chowk is a must-visit for street food. Go hungry, come back happy!</div>';
+  return html;
+}
 function renderSalons(){return renderPlaceCards(DATA.beautySalons)+'<div class="note"><span class="note-label">Booking tip:</span> For wedding-day makeup, book at least a day in advance. Mornings fill up fast!</div>'}
-function renderMustEat(){return renderPlaceCards(DATA.mustEat,false)+'<div class="note"><span class="note-label">Foodie note:</span> Chandni Chowk is a must-visit for street food. Go hungry, come back happy!</div>'}
 function renderMustDo(){return renderPlaceCards(DATA.mustDo,false)+'<div class="note"><span class="note-label">Getting around:</span> Use Delhi Metro for most attractions. Uber/Ola are great for door-to-door. Auto-rickshaws are an experience in themselves!</div>'}
 
 function renderLastPage(){
@@ -705,8 +712,9 @@ function buildSections(){
     div.id = 'page-' + s.id;
     div.className = 'page';
     div.style.display = 'none';
-    var prevId = allIds[i];
-    var nextId = (i < SECTIONS.length - 1) ? allIds[i + 2] : null;
+    var sectionIdx = i + 1; // position in allIds (0 is index)
+    var prevId = allIds[sectionIdx - 1];
+    var nextId = (sectionIdx < allIds.length - 1) ? allIds[sectionIdx + 1] : null;
     var navHtml = '<div class="nav-bar">' +
       '<a onclick="navigateTo(\'' + prevId + '\')">\u2039</a>' +
       '<a class="nav-contents" onclick="navigateTo(\'index\')">\u273f</a>' +
