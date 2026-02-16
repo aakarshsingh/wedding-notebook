@@ -446,12 +446,12 @@ var DATA = {
   ],
   hotel: {
     name: "Anila Boutique Hotels", address: "A-15, Shindi Colony, Naraina Vihar, Naraina, New Delhi 110028",
-    phone: "PLACEHOLDER_PHONE", mapLink: "https://maps.google.com/?q=Anila+Boutique+Hotels+Naraina+Vihar",
-    checkIn: "12:45 pm (on paper), 12:00 pm usually. Earlier on a case-by-case basis.", checkOut: "11:00 am (strict)", wifi: "PLACEHOLDER_WIFI_PASSWORD", notes: "PLACEHOLDER_ADDITIONAL_NOTES"
+    phone: "011 4747 8000", mapLink: "https://maps.google.com/?q=Anila+Boutique+Hotels+Naraina+Vihar",
+    checkIn: "12:45 pm (on paper), 12:00 pm usually. Earlier on a case-by-case basis.", checkOut: "11:00 am (strict)", wifi: "Remeber to take your WiFi Coupons during Check-In", notes: "PLACEHOLDER_ADDITIONAL_NOTES"
   },
   hotelMeals: [
     { day: "18th Feb (Wednesday)", meals: [
-      { meal: "Lunch", time: "2:00 pm \u2013 4:00 pm" },
+      { meal: "Lunch (Late)", time: "2:00 pm \u2013 4:00 pm" },
       { meal: "Hi-Tea", time: "6:00 pm" }
     ]},
     { day: "19th Feb (Thursday)", meals: [
@@ -603,7 +603,6 @@ function renderHotelAndMeals(){
     html += '</tbody></table></div>';
   });
 
-  html += '<div class="note"><span class="note-label">Just so you know:</span> These timings might shift a bit on wedding days. Check with the front desk if you\u2019re unsure.</div>';
   return html;
 }
 function renderMetro(){
