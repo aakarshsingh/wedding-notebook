@@ -489,19 +489,15 @@ var DATA = {
     { name: "Nick\u2019s Salon", distance: "3 min walk", rating: "4.7", hours: "10 AM \u2013 9 PM (Closed Tuesdays)", highlight: "Smoothing, colour, facials. Closed Tuesdays though, so plan around that.", mapLink: "https://maps.google.com/?q=Nicks+Salon+Naraina", phone: "PLACEHOLDER" }
   ],
   mustEat: [
-    { name: "Bukhara (ITC Maurya)", type: "Fine Dining", area: "Dhaula Kuan (Airport Line)", highlight: "Frontier cooking brought by families who crossed the border in \u201947. The Dal Bukhara alone is worth the trip. Book ahead \u2014 it fills up.", mapLink: "https://maps.google.com/?q=Bukhara+ITC+Maurya" },
-    { name: "Gulati Restaurant", type: "North Indian", area: "Khan Market (Violet Line)", highlight: "Punjabi refugee family, 1950s, one small shop. Now it\u2019s three generations and the butter chicken is still the one everyone talks about.", mapLink: "https://maps.google.com/?q=Gulati+Restaurant+Pandara+Road" },
-    { name: "Kake Da Hotel", type: "Punjabi", area: "Rajiv Chowk (Blue/Yellow Line)", highlight: "Family from Peshawar, came over during Partition, never changed the recipes. The dal makhani tastes like it\u2019s from someone\u2019s kitchen. Because it basically is.", mapLink: "https://maps.google.com/?q=Kake+Da+Hotel+Connaught+Place" },
+    { name: "Bukhara (ITC Maurya)", type: "Fine Dining", area: "Dhaula Kuan (Airport Line)", highlight: "Frontier-style cooking. The Dal Bukhara alone is worth the trip. Book ahead, it fills up.", mapLink: "https://maps.google.com/?q=Bukhara+ITC+Maurya" },
+    { name: "Gulati Restaurant", type: "North Indian", area: "Khan Market (Violet Line)", highlight: "Three generations, one family, and a butter chicken recipe that hasn\u2019t changed. Try the lunch buffet.", mapLink: "https://maps.google.com/?q=Gulati+Restaurant+Pandara+Road" },
+    { name: "Kake Da Hotel", type: "Punjabi", area: "Rajiv Chowk (Blue/Yellow Line)", highlight: "Old-school Punjabi joint in the middle of CP. The dal makhani tastes like it\u2019s from someone\u2019s kitchen. Because it basically is.", mapLink: "https://maps.google.com/?q=Kake+Da+Hotel+Connaught+Place" },
     { name: "Kake Di Hatti", type: "Vegetarian Punjabi", area: "Chandni Chowk (Yellow Line)", highlight: "The naans here are comically large and absolutely unreal. Chole bhature too. Pure veg, pure joy.", mapLink: "https://maps.google.com/?q=Kake+Di+Hatti+Chandni+Chowk" },
-    { name: "Natraj Dahi Bhalla", type: "Street Food / Chaat", area: "Chandni Chowk (Yellow Line)", highlight: "Open since 1940. These lanes have fed Mughal kings, British officers, and now you. The dahi bhalle and aloo tikki are unbeatable.", mapLink: "https://maps.google.com/?q=Natraj+Dahi+Bhalla+Chandni+Chowk" },
+    { name: "Natraj Dahi Bhalla", type: "Street Food / Chaat", area: "Chandni Chowk (Yellow Line)", highlight: "Open since 1940. The dahi bhalle and aloo tikki are unbeatable. Go hungry.", mapLink: "https://maps.google.com/?q=Natraj+Dahi+Bhalla+Chandni+Chowk" },
     { name: "The Big Chill Cafe", type: "Italian / Desserts", area: "Khan Market (Violet Line)", highlight: "Every Delhiite\u2019s comfort place. Pasta, pizza, cheesecake. Go when you need a break from all the butter chicken.", mapLink: "https://maps.google.com/?q=Big+Chill+Cafe+Khan+Market" }
   ],
   mustDo: [
-    { name: "India Gate & Kartavya Path", area: "Central Secretariat (Yellow/Violet Line)", highlight: "Go at sunset if you can. The new underground cafe is a nice bonus. It hits different in person.", mapLink: "https://maps.google.com/?q=India+Gate+Delhi" },
-    { name: "Qutub Minar", area: "Qutab Minar (Yellow Line)", highlight: "800 years old, tallest brick minaret anywhere. The Iron Pillar next to it hasn\u2019t rusted in 1600 years. Nobody knows why.", mapLink: "https://maps.google.com/?q=Qutub+Minar" },
-    { name: "Humayun\u2019s Tomb", area: "JLN Stadium (Violet Line)", highlight: "They built the Taj Mahal based on this. The last Mughal emperor hid here before the British found him. The gardens are stunning.", mapLink: "https://maps.google.com/?q=Humayun+Tomb+Delhi" },
-    { name: "Chandni Chowk Walk", area: "Chandni Chowk (Yellow Line)", highlight: "Shah Jahan built this road in 1650. Spice lanes, Mughal-era food, gurdwaras, Jain temples \u2014 all crammed into one glorious, chaotic stretch.", mapLink: "https://maps.google.com/?q=Chandni+Chowk+Delhi" },
-    { name: "Jantar Mantar", area: "Patel Chowk (Yellow Line)", highlight: "Giant 18th-century astronomical instruments sitting in the middle of the city. Strange and wonderful. \u20b925 to get in.", mapLink: "https://maps.google.com/?q=Jantar+Mantar+Delhi" },
+    { name: "Chandni Chowk", area: "Chandni Chowk (Yellow Line)", highlight: "Shah Jahan built this road in 1650. Spice lanes, old food joints, gurdwaras, Jain temples, all crammed into one glorious, chaotic stretch.", mapLink: "https://maps.google.com/?q=Chandni+Chowk+Delhi" },
     { name: "National Rail Museum", area: "Durgabai Deshmukh South Campus (Pink Line)", highlight: "Old trains, joy rides, and a surprisingly good time. Works whether you\u2019re 8 or 80.", mapLink: "https://maps.google.com/?q=National+Rail+Museum+Delhi" },
     { name: "Khan Market", area: "Khan Market (Violet Line)", highlight: "Bookshops, boutiques, good coffee. Delhi\u2019s version of a lazy afternoon well spent.", mapLink: "https://maps.google.com/?q=Khan+Market+Delhi" },
     { name: "Connaught Place (CP)", area: "Rajiv Chowk (Blue/Yellow Line)", highlight: "The British built the arcades in the 1930s. After Partition, refugee families filled the corridors with shops and food. Now it\u2019s Delhi\u2019s living room.", mapLink: "https://maps.google.com/?q=Connaught+Place+Delhi" }
@@ -638,7 +634,7 @@ function renderPlaceCards(items,showRating){
 function renderPlacesToEat(){return renderPlaceCards(DATA.placesToEat)}
 function renderPlacesToShop(){return renderPlaceCards(DATA.placesToShop,false)}
 function renderFood(){
-  var html = '<div style="font-family:Kalam,cursive;font-size:0.9rem;color:#8a7a6a;margin-bottom:1rem;line-height:1.6">Delhi\u2019s food tells you who lived here \u2014 Mughal courts, Partition-era families starting over with a tandoor and a recipe, street vendors whose stalls are older than the country itself.</div>';
+  var html = '<div style="font-family:Kalam,cursive;font-size:0.9rem;color:#8a7a6a;margin-bottom:1rem;line-height:1.6">Delhi\u2019s food tells you who lived here. Old family recipes, street vendors who\u2019ve been at it for decades, hole-in-the-wall joints that somehow always have a queue. Here are some favourites.</div>';
   html += '<div style="font-family:Caveat,cursive;font-size:1.4rem;font-weight:700;color:#4a3728;margin-bottom:0.6rem">\ud83c\udf1f Must Eat in Delhi</div>';
   html += renderPlaceCards(DATA.mustEat, false);
   html += '<div class="doodle-divider">~ \u2743 ~</div>';
@@ -655,7 +651,7 @@ function renderMustDo(){
   html += '<div style="font-family:Caveat,cursive;font-size:1.4rem;font-weight:700;color:#4a3728;margin-bottom:0.3rem">\ud83d\udc8e Hidden Gems</div>';
   html += '<div style="font-family:Kalam,cursive;font-size:0.9rem;color:#8a7a6a;margin-bottom:0.8rem;line-height:1.6">The stuff that won\u2019t show up on a top-10 list but will probably be the thing you remember most.</div>';
   html += renderPlaceCards(DATA.hiddenGems,false);
-  html += '<div class="note"><span class="note-label">Getting around:</span> Metro is the fastest way to most of these. Uber and Ola work well too. And if you haven\u2019t sat in a Delhi auto-rickshaw yet... you should, at least once.</div>';
+  html += '<div class="note"><span class="note-label">Getting around:</span> Metro is the fastest way to most of these. Uber and Ola work well too.</div>';
   return html;
 }
 
