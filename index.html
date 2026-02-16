@@ -465,8 +465,8 @@ var DATA = {
     ]}
   ],
   metro: [
-    { name: "Naraina Vihar Metro Station", line: "Pink Line", distance: "5 min walk from hotel", notes: "Connects to Rajiv Chowk (Yellow Line) via interchange at INA or Rajouri Garden (Blue Line)." },
-    { name: "Rajouri Garden Metro Station", line: "Blue Line", distance: "~10 min by auto from hotel", notes: "Direct connectivity to Chandni Chowk, Connaught Place, and Noida." }
+    { name: "Naraina Vihar Metro Station", line: "Pink Line", distance: "5 min walk from hotel", notes: "Connects to Rajiv Chowk (Yellow Line) via interchange at INA or Rajouri Garden (Blue Line).", mapLink: "https://maps.app.goo.gl/ctpaCNsP13phbWVFA" },
+    { name: "Rajouri Garden Metro Station", line: "Blue Line", distance: "~10 min by auto from hotel", notes: "Direct connectivity to Chandni Chowk, Connaught Place, and Noida.", mapLink: "https://maps.app.goo.gl/n3sXxUYQ282QcQM2A" }
   ],
   placesToEat: [
     { name: "Ikk Punjab", type: "Punjabi", distance: "Rajouri Garden (Pink Line)", rating: "", highlight: "Solid neighbourhood Punjabi food. No frills, just good stuff.", mapLink: "https://maps.google.com/?q=Ikk+Punjab+Naraina" },
@@ -479,10 +479,10 @@ var DATA = {
     { name: "Sarojini Nagar Market", distance: "Sarojini Nagar (Pink Line)", highlight: "The holy grail of bargain shopping. Branded surplus stuff at silly prices. You will need to haggle. Hard.", mapLink: "https://maps.google.com/?q=Sarojini+Nagar+Market" }
   ],
   beautySalons: [
-    { name: "Geetanjali Salon", type: "5 min walk", rating: "4.5", hours: "10:00 am \u2013 9:00 pm daily", highlight: "", mapLink: "https://share.google/OAEX13Ay4hS6f8rau", phone: "" },
-    { name: "Nick\u2019s Salon \u2013 Makeup Studio & Academy", type: "3 min walk", rating: "4.7", hours: "10:00 am \u2013 9:00 pm (Closed Tuesdays)", highlight: "", mapLink: "https://maps.app.goo.gl/CzTZeBwad1KHEech9", phone: "" },
-    { name: "The Balayage \u2013 Unisex Salon", type: "2 min walk", rating: "4.6", hours: "10:00 am \u2013 9:00 pm daily", highlight: "", mapLink: "https://maps.app.goo.gl/FVrqtjkbopW6enJf7", phone: "" },
-    { name: "CUT&STYLE Salon", type: "4 min walk", rating: "4.7", hours: "10:00 am \u2013 9:00 pm daily", highlight: "", mapLink: "https://maps.google.com/?q=Cut+Style+Salon+Naraina+Vihar", phone: "" }
+    { name: "Geetanjali Salon", distance: "7 min walk", rating: "4.5", highlight: "", mapLink: "https://maps.app.goo.gl/Ny52QaeRRcXttw4w8" },
+    { name: "Nick\u2019s Salon \u2013 Makeup Studio & Academy", distance: "5 min walk", rating: "4.7", highlight: "", mapLink: "https://maps.app.goo.gl/CgAdyJZjNJFmTnZSA" },
+    { name: "The Balayage \u2013 Unisex Salon", distance: "5 min walk", rating: "4.5", highlight: "", mapLink: "https://maps.app.goo.gl/DfMQH9fGPAYusRUA9" },
+    { name: "CUT&STYLE Salon", distance: "6 min walk", rating: "4.7", highlight: "", mapLink: "https://maps.app.goo.gl/HXCGrXjLLyFfUVs28" }
   ],
   mustEat: [
     { name: "Bukhara (ITC Maurya)", type: "Fine Dining", area: "Dhaula Kuan (Airport Line)", highlight: "Frontier-style cooking. The Dal Bukhara alone is worth the trip. Book ahead, it fills up.", mapLink: "https://maps.google.com/?q=Bukhara+ITC+Maurya" },
@@ -491,7 +491,7 @@ var DATA = {
     { name: "Wengers", type: "Bakery / Cafe", area: "Rajiv Chowk (Blue/Yellow Line)", highlight: "CP institution since 1926. Patties, pastries, and a vibe that hasn\u2019t changed in decades.", mapLink: "https://maps.google.com/?q=Wengers+Connaught+Place" },
     { name: "Kake Di Hatti", type: "Vegetarian Punjabi", area: "Chandni Chowk (Yellow Line)", highlight: "The naans here are comically large and absolutely unreal. Chole bhature too. Pure veg, pure joy.", mapLink: "https://maps.google.com/?q=Kake+Di+Hatti+Chandni+Chowk" },
     { name: "Natraj Dahi Bhalla", type: "Street Food / Chaat", area: "Chandni Chowk (Yellow Line)", highlight: "Open since 1940. The dahi bhalle and aloo tikki are unbeatable. Go hungry.", mapLink: "https://maps.google.com/?q=Natraj+Dahi+Bhalla+Chandni+Chowk" },
-    { name: "Jama Masjid Food Walk", type: "Street Food", area: "Jama Masjid (Violet Line)", highlight: "Kebabs at Karim\u2019s, nihari at Al Jawahar, jalebi from the old shops. Walk around and eat everything.", mapLink: "https://maps.google.com/?q=Jama+Masjid+Delhi" },
+    { name: "Jama Masjid Food Walk", type: "Street Food", area: "Jama Masjid (Violet Line)", highlight: "Kebabs at Karim\u2019s, nihari at Al Jawahar, jalebi from the old shops. Walk around and eat everything. <a href='https://travelseewrite.com/jama-masjid-delhi-food-walk/' target='_blank' style='color:#7a6040;text-decoration:underline;text-decoration-style:wavy'>A detailed food walk guide</a>.", mapLink: "https://maps.google.com/?q=Jama+Masjid+Delhi" },
     { name: "The Big Chill Cafe", type: "Italian / Desserts", area: "Khan Market (Violet Line)", highlight: "Every Delhiite\u2019s comfort place. Pasta, pizza, cheesecake. For when you need a break from all the butter chicken.", mapLink: "https://maps.google.com/?q=Big+Chill+Cafe+Khan+Market" }
   ],
   mustDo: [
@@ -532,6 +532,7 @@ var SECTIONS = [
   { id:"hotel",     icon:"\ud83c\udfe8", label:"Hotel & Timings",         render:renderHotelAndMeals },
   { id:"etiquette", icon:"\ud83d\ude4f", label:"Gurudwara Etiquettes",    render:renderEtiquettes },
   { id:"cricket",   icon:"\ud83c\udfcf", label:"Cricket Rules",           render:renderCricket },
+  { id:"metro",     icon:"METRO", label:"Nearest Metro Stations",  render:renderMetro },
   { id:"mustdo",    icon:"\u2728",       label:"Must Dos in Delhi",       render:renderMustDo },
   { id:"food",      icon:"\ud83c\udf5c", label:"Places to Eat",           render:renderFood },
   { id:"shop",      icon:"\ud83d\udecd\ufe0f", label:"Places to Shop",          render:renderPlacesToShop },
@@ -550,7 +551,7 @@ function renderEvents(){
     day.events.forEach(function(e){
       h+='<li class="timeline-event"><div class="event-name">'+e.name+'</div>';
       h+='<div class="event-detail">\u23f0 '+e.time+'</div>';
-      h+='<div class="event-detail"><a href="'+e.mapLink+'" target="_blank" class="card-tag" style="text-decoration:none">\u23f0 '+e.address+'</a></div></div>';
+      h+='<div class="event-detail"><a href="'+e.mapLink+'" target="_blank" style="color:#7a6040;text-decoration:underline;text-decoration-style:wavy">\ud83d\udccd '+e.address+'</a></div>';
       if(e.dress)h+='<div class="event-detail">\ud83d\udc57 '+e.dress+'</div>';
       if(e.notes)h+='<div class="note" style="margin-top:0.4rem"><span class="note-label">Note:</span> '+e.notes+'</div>';
       h+='</li>';
@@ -566,7 +567,7 @@ function renderEtiquettes(){
 }
 function renderCricket(){
   var r = DATA.cricketRules;
-  var html = '<div style="text-align:center;margin-bottom:1rem"><div style="font-family:Caveat,cursive;font-size:1.6rem;font-weight:700;color:#4a3728">\ud83c\udfcf ' + r.title + '</div><div style="font-family:Patrick Hand,cursive;font-size:1rem;color:#8a7a6a">February 19th \u00b7 12:30 pm \u00b7 Smash 2 Play Turf, Patel Nagar</div></div>';
+  var html = '<div style="text-align:center;margin-bottom:1rem"><div style="font-family:Caveat,cursive;font-size:1.6rem;font-weight:700;color:#4a3728">\ud83c\udfcf ' + r.title + '</div><div style="font-family:Patrick Hand,cursive;font-size:1rem;color:#8a7a6a">February 19th \u00b7 12:30 pm \u00b7 <a href="https://maps.app.goo.gl/UAwdVkJaFmEyh3Ag9" target="_blank" style="color:#7a6040;text-decoration:underline;text-decoration-style:wavy">\ud83d\udccd Smash 2 Play Turf, Patel Nagar</a></div></div>';
   html += '<div style="font-family:Caveat,cursive;font-size:1.3rem;font-weight:700;color:#4a3728;margin-bottom:0.5rem">Match Rules</div>';
   r.matchRules.forEach(function(rule){
     html += '<div class="etiquette-item"><span class="etiquette-icon">\ud83c\udfcf</span><span><strong>' + rule.label + ':</strong> ' + rule.text + '</span></div>';
@@ -582,13 +583,12 @@ function renderCricket(){
 function renderHotelAndMeals(){
   var h=DATA.hotel;
   var html = '<div class="card card-highlight"><div class="card-name">'+h.name+'</div>'+
-    '<div class="card-detail">\ud83d\udccd '+h.address+'</div>'+
+    '<div class="card-detail"><a href="'+h.mapLink+'" target="_blank" style="color:#7a6040;text-decoration:underline;text-decoration-style:wavy">\ud83d\udccd '+h.address+'</a></div>'+
     '<div class="card-detail">\ud83d\udcde '+h.phone+'</div>'+
     '<div class="card-detail">\ud83d\udd11 Check-in: '+h.checkIn+'</div>'+
     '<div class="card-detail">\ud83d\udd11 Check-out: '+h.checkOut+'</div>'+
     '<div class="card-detail">\ud83d\udcf6 WiFi: '+h.wifi+'</div>'+
-    (h.notes&&h.notes.indexOf('PLACEHOLDER')===-1?'<div class="card-detail">\ud83d\udcdd '+h.notes+'</div>':'')+
-    '<div style="margin-top:0.5rem"><a href="'+h.mapLink+'" target="_blank" class="card-tag" style="text-decoration:none">\ud83d\udccd Open in Maps</a></div></div>';
+    (h.notes&&h.notes.indexOf('PLACEHOLDER')===-1?'<div class="card-detail">\ud83d\udcdd '+h.notes+'</div>':'')+'</div>';
 
   html += '<div class="doodle-divider">~ \u2743 ~</div>';
   html += '<div style="font-family:Caveat,cursive;font-size:1.4rem;font-weight:700;color:#4a3728;margin-bottom:0.3rem">\ud83c\udf7d\ufe0f Meal Timings</div>';
@@ -607,11 +607,11 @@ function renderHotelAndMeals(){
 }
 function renderMetro(){
   return DATA.metro.map(function(m){
-    return '<div class="card"><div class="card-name">' + METRO_ICON + ' '+m.name+'</div>'+
+    return '<div class="card"><div class="card-name">' + METRO_ICON + ' <a href="'+m.mapLink+'" target="_blank" style="color:#7a6040;text-decoration:underline;text-decoration-style:wavy">'+m.name+'</a></div>'+
       '<div class="card-tag">'+m.line+'</div>'+
       '<div class="card-detail" style="margin-top:0.4rem">\ud83d\udccf '+m.distance+'</div>'+
       '<div class="card-detail">\ud83d\udca1 '+m.notes+'</div></div>';
-  }).join('')+'<div class="note"><span class="note-label">Quick tip:</span> Get the "Delhi Metro Rail" app it\u2019ll save you a lot of guesswork. A reloadable metro card beats queuing for tokens every time.</div>';
+  }).join('')+'<div class="note"><span class="note-label">Quick tip:</span> Get the "Delhi Metro Rail" app it\u2019ll save you a lot of guesswork.</div>';
 }
 function renderPlaceCards(items,showRating){
   if(showRating===undefined)showRating=true;
@@ -619,7 +619,7 @@ function renderPlaceCards(items,showRating){
     return '<div class="card"><div class="card-name">'+p.name+'</div>'+
       (p.type?'<div class="card-tag">'+p.type+'</div>':'')+
       (p.area?'<div class="card-tag">' + METRO_ICON + ' ' +p.area+'</div>':'')+
-      (p.distance?'<div class="card-tag">' + METRO_ICON + ' ' +p.distance+'</div>':'')+
+      (p.distance?'<div class="card-tag">'+(p.distance.indexOf('walk')!==-1?'\ud83d\udeb6 ':METRO_ICON+' ')+p.distance+'</div>':'')+
       (showRating&&p.rating?'<div class="card-rating" style="margin-top:0.3rem">\u2605 '+p.rating+'</div>':'')+
       (p.hours?'<div class="card-detail" style="margin-top:0.3rem">\ud83d\udd50 '+p.hours+'</div>':'')+
       (p.highlight?'<div class="card-detail" style="margin-top:0.3rem">'+p.highlight+'</div>':'')+
@@ -640,7 +640,7 @@ function renderFood(){
   
   return html;
 }
-function renderSalons(){return renderPlaceCards(DATA.beautySalons)}
+function renderSalons(){return renderPlaceCards(DATA.beautySalons)+'<div class="note"><span class="note-label">Timings:</span> All salons run 10:00 am to 9:00 pm daily.</div>'}
 function renderMustDo(){
   var html = '<div style="font-family:Kalam,cursive;font-size:0.9rem;color:#8a7a6a;margin-bottom:1rem;line-height:1.6">Delhi has been built, destroyed, and rebuilt seven times. Every part of the city is standing on top of something older. Here are a few places worth seeing between all the wedding chaos.</div>';
   html += renderPlaceCards(DATA.mustDo,false);
@@ -756,8 +756,9 @@ function buildIndex(){
     var li = document.createElement('li');
     li.className = 'index-item';
     li.onclick = function(){ navigateTo(s.id); };
+    var iconHtml = s.icon === 'METRO' ? METRO_ICON : s.icon;
     li.innerHTML = '<span class="index-num">'+(i+1)+'.</span>'+
-      '<span class="index-icon">'+s.icon+'</span>'+
+      '<span class="index-icon">'+iconHtml+'</span>'+
       '<span class="index-label">'+s.label+'</span>'+
       '<span class="index-arrow">\u203a</span>';
     list.appendChild(li);
@@ -784,7 +785,7 @@ function buildSections(){
       '<div style="text-align:center;padding:1rem 0"><a onclick="navigateTo(\'' + nextId + '\')" style="font-family:Patrick Hand,cursive;font-size:1.15rem;color:#8a7a6a;cursor:pointer;text-decoration:none">' + SECTIONS[i+1].label + ' \u2192</a></div>' :
       '<div style="text-align:center;padding:1rem 0;font-family:Caveat,cursive;font-size:1.2rem;color:#b09878">\u2743 You\u2019ve reached the last page! \u2743<br><a onclick="navigateTo(\'index\')" style="font-family:Patrick Hand,cursive;font-size:1.05rem;color:#8a7a6a;cursor:pointer;text-decoration:none">\u2190 back to contents</a></div>';
     div.innerHTML = '<div class="section active">' + navHtml +
-      '<div class="section-header"><span class="section-icon">'+s.icon+'</span><span class="section-title">'+s.label+'</span></div>'+
+      '<div class="section-header"><span class="section-icon">'+(s.icon==='METRO'?METRO_ICON:s.icon)+'</span><span class="section-title">'+s.label+'</span></div>'+
       s.render()+
       '<div class="doodle-divider">~ \u2743 ~</div>'+
       bottomNav +
