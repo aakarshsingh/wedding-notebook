@@ -401,7 +401,7 @@ body{font-family:'Kalam',cursive;background:#f5f0e8;color:#3a3226;overflow-x:hid
         <ul class="index-list" id="indexList"></ul>
         <div class="doodle-divider">~ &#10047; ~</div>
         <div class="note">
-          <span class="note-label">Psst!</span> &mdash; We put together this little notebook so you don&rsquo;t have to keep texting us for directions. Tap any topic above.
+          <span class="note-label">Psst!</span> &mdash; We put together this little notebook so you don&rsquo;t have to wonder about the basic information. Tap any topic above. For everything else there is always the WhatsApp Group &lsquo;T&amp;A - Emotional Support Baraatis &#128131;&#128378;&rsquo;
         </div>
       </div>
     </div>
@@ -425,14 +425,14 @@ var METRO_ICON = '<img src="https://upload.wikimedia.org/wikipedia/commons/6/65/
 var DATA = {
   events: [
     { date: "18th February 2026", day: "Wednesday", events: [
-      { name: "Cocktail & Sangeet", time: "7:00 PM onwards", venue: "PLACEHOLDER_VENUE", dress: "PLACEHOLDER_DRESSCODE", notes: "" }
+      { name: "Cocktail & Sangeet", time: "8:00 pm", venue: "Aster Hall, Orana Aurnum, Mayapuri", dress: "Indo-Western / Western / Glitz", notes: "" }
     ]},
     { date: "19th February 2026", day: "Thursday", events: [
-      { name: "Cricket Match", time: "PLACEHOLDER_TIME", venue: "PLACEHOLDER_VENUE", dress: "Comfortable sportswear", notes: "Get ready for some friendly competition!" }
+      { name: "Cricket Match", time: "12:30 pm", venue: "Smash 2 Play Turf, Patel Nagar", dress: "Comfortable sportswear", notes: "Dilli Dhurandhars vs. Mighty Mauryans! Check the <a onclick=\"navigateTo('cricket')\" style=\"color:#7a6040;text-decoration:underline;text-decoration-style:wavy;cursor:pointer\">match rules</a>." }
     ]},
     { date: "20th February 2026", day: "Friday", events: [
-      { name: "Sikh Wedding", time: "PLACEHOLDER_TIME (Morning)", venue: "PLACEHOLDER_GURUDWARA", dress: "Head covering required", notes: "Covering your head is mandatory. Scarves available at the entrance. Other etiquettes <a onclick=\"navigateTo('etiquette')\" style=\"color:#7a6040;text-decoration:underline;text-decoration-style:wavy;cursor:pointer\">here</a>." },
-      { name: "Hindu Wedding", time: "PLACEHOLDER_TIME (Evening)", venue: "PLACEHOLDER_VENUE", dress: "PLACEHOLDER_DRESSCODE", notes: "" }
+      { name: "Anand Karaj", time: "11:00 am", venue: "Gurdwara Sri Guru Singh Sabha, Vasant Kunj", dress: "Head covering required", notes: "Covering your head is mandatory. Scarves available at the entrance. Other etiquettes <a onclick=\"navigateTo('etiquette')\" style=\"color:#7a6040;text-decoration:underline;text-decoration-style:wavy;cursor:pointer\">here</a>." },
+      { name: "Band Baaja Baraat", time: "9:00 pm onwards", venue: "William 2, Grand Dreams, Mayapuri", dress: "Indian", notes: "9:00 pm \u2014 Baraat Arrival \u00b7 11:00 pm \u2014 Pheras" }
     ]}
   ],
   gurudwaraEtiquettes: [
@@ -447,13 +447,22 @@ var DATA = {
   hotel: {
     name: "Anila Boutique Hotels", address: "A-15, Shindi Colony, Naraina Vihar, Naraina, New Delhi 110028",
     phone: "PLACEHOLDER_PHONE", mapLink: "https://maps.google.com/?q=Anila+Boutique+Hotels+Naraina+Vihar",
-    checkIn: "12:00 PM", checkOut: "11:30 AM", wifi: "PLACEHOLDER_WIFI_PASSWORD", notes: "PLACEHOLDER_ADDITIONAL_NOTES"
+    checkIn: "12:45 pm (on paper), 12:00 pm usually. Earlier on a case-by-case basis.", checkOut: "11:00 am (strict)", wifi: "PLACEHOLDER_WIFI_PASSWORD", notes: "PLACEHOLDER_ADDITIONAL_NOTES"
   },
   hotelMeals: [
-    { meal: "Breakfast", time: "PLACEHOLDER (e.g. 7:30 AM \u2013 10:00 AM)", location: "PLACEHOLDER" },
-    { meal: "Lunch", time: "PLACEHOLDER (e.g. 12:30 PM \u2013 2:30 PM)", location: "PLACEHOLDER" },
-    { meal: "Evening Tea", time: "PLACEHOLDER (e.g. 4:00 PM \u2013 5:00 PM)", location: "PLACEHOLDER" },
-    { meal: "Dinner", time: "PLACEHOLDER (e.g. 7:30 PM \u2013 10:00 PM)", location: "PLACEHOLDER" }
+    { day: "18th Feb (Wednesday)", meals: [
+      { meal: "Lunch", time: "2:00 pm \u2013 4:00 pm" },
+      { meal: "Hi-Tea", time: "6:00 pm" }
+    ]},
+    { day: "19th Feb (Thursday)", meals: [
+      { meal: "Breakfast", time: "8:00 am \u2013 10:30 am" },
+      { meal: "Lunch", time: "1:00 pm \u2013 3:00 pm" },
+      { meal: "Hi-Tea", time: "5:30 pm" }
+    ]},
+    { day: "20th Feb (Friday)", meals: [
+      { meal: "Breakfast", time: "8:00 am \u2013 10:30 am" },
+      { meal: "Hi-Tea", time: "5:30 pm" }
+    ]}
   ],
   metro: [
     { name: "Naraina Vihar Metro Station", line: "Pink Line", distance: "5 min walk from hotel", notes: "Connects to Rajiv Chowk (Yellow Line) via interchange at INA or Rajouri Garden (Blue Line)." },
@@ -504,19 +513,34 @@ var DATA = {
     { name: "Nizamuddin Dargah", area: "JLN Stadium (Violet Line)", highlight: "Go on a Thursday night for the qawwali. Live Sufi music in a candlelit courtyard. One of those things you don\u2019t forget.", mapLink: "https://maps.google.com/?q=Nizamuddin+Dargah+Delhi" },
     { name: "Champa Gali", area: "Saket (Yellow Line)", highlight: "Indie caf\u00e9s, bookstores, fairy lights, soft artsy date vibes. Tucked behind a factory lane \u2014 that\u2019s part of the charm.", mapLink: "https://maps.google.com/?q=Champa+Gali+Saket+Delhi" },
     { name: "Teen Murti Bhavan", area: "Lok Kalyan Marg (Yellow Line)", highlight: "Nehru\u2019s residence, now a museum. The Pradhanmantri Sangrahalaya next door covers every PM since independence \u2014 worth a quiet afternoon.", mapLink: "https://maps.google.com/?q=Teen+Murti+Bhavan+Delhi" }
-  ]
+  ],
+  cricketRules: {
+    title: "Dilli Dhurandhars vs. Mighty Mauryans",
+    matchRules: [
+      { label: "Format", text: "8 overs per innings." },
+      { label: "Bowling", text: "Max 2 overs for up to 2 players; others 1 over each." },
+      { label: "Wickets", text: "7 wickets per side." },
+      { label: "Last Man Standing", text: "Once the 6th wicket falls, the last batter stays in but cannot run singles \u2014 must score in boundaries or even numbers to stay at the striker\u2019s end." },
+      { label: "Extras", text: "1 run per extra with a re-bowl." }
+    ],
+    scoringRules: [
+      { label: "Ahead of Half-line (Sides)", text: "2 runs." },
+      { label: "Behind Half-line (Any side)", text: "1 run." },
+      { label: "Straight Boundary", text: "4 or 6 runs." },
+      { label: "Ceiling", text: "Not out. You can hit the ceiling and run normally. If the ball hits the boundary after touching the ceiling, it counts as a 4 (no 6s allowed off the ceiling)." }
+    ]
+  }
 };
 
 // ============================================================
 var SECTIONS = [
-  { id:"hotel",     icon:"\ud83c\udfe8", label:"Hotel Details",           render:renderHotel },
   { id:"events",    icon:"\ud83c\udf89", label:"Event Details",           render:renderEvents },
-  { id:"meals",     icon:"\ud83c\udf7d\ufe0f", label:"Hotel Meal Timings",      render:renderMeals },
-  { id:"metro",     icon:"\ud83d\ude87", label:"Nearest Metro Stations",  render:renderMetro },
-  { id:"shop",      icon:"\ud83d\udecd\ufe0f", label:"Places to Shop",          render:renderPlacesToShop },
+  { id:"hotel",     icon:"\ud83c\udfe8", label:"Hotel & Timings",         render:renderHotelAndMeals },
   { id:"etiquette", icon:"\ud83d\ude4f", label:"Gurudwara Etiquettes",    render:renderEtiquettes },
+  { id:"cricket",   icon:"\ud83c\udfcf", label:"Cricket Rules",           render:renderCricket },
   { id:"mustdo",    icon:"\u2728",       label:"Must Dos in Delhi",       render:renderMustDo },
   { id:"food",      icon:"\ud83c\udf5c", label:"Places to Eat",           render:renderFood },
+  { id:"shop",      icon:"\ud83d\udecd\ufe0f", label:"Places to Shop",          render:renderPlacesToShop },
   { id:"salons",    icon:"\ud83d\udc87", label:"Beauty Salons Nearby",    render:renderSalons },
   { id:"lastpage",  icon:"\ud83d\udc9b", label:"One Last Thing...",        render:renderLastPage }
 ];
@@ -546,20 +570,47 @@ function renderEtiquettes(){
     return '<div class="etiquette-item"><span class="etiquette-icon">'+e.icon+'</span><span>'+e.text+'</span></div>';
   }).join('');
 }
-function renderHotel(){
+function renderCricket(){
+  var r = DATA.cricketRules;
+  var html = '<div style="text-align:center;margin-bottom:1rem"><div style="font-family:Caveat,cursive;font-size:1.6rem;font-weight:700;color:#4a3728">\ud83c\udfcf ' + r.title + '</div><div style="font-family:Patrick Hand,cursive;font-size:1rem;color:#8a7a6a">February 19th \u00b7 12:30 pm \u00b7 Smash 2 Play Turf, Patel Nagar</div></div>';
+  html += '<div style="font-family:Caveat,cursive;font-size:1.3rem;font-weight:700;color:#4a3728;margin-bottom:0.5rem">Match Rules</div>';
+  r.matchRules.forEach(function(rule){
+    html += '<div class="etiquette-item"><span class="etiquette-icon">\ud83c\udfcf</span><span><strong>' + rule.label + ':</strong> ' + rule.text + '</span></div>';
+  });
+  html += '<div class="doodle-divider">~ \u2743 ~</div>';
+  html += '<div style="font-family:Caveat,cursive;font-size:1.3rem;font-weight:700;color:#4a3728;margin-bottom:0.5rem">Scoring & Net Rules</div>';
+  r.scoringRules.forEach(function(rule){
+    html += '<div class="etiquette-item"><span class="etiquette-icon">\ud83d\udcca</span><span><strong>' + rule.label + ':</strong> ' + rule.text + '</span></div>';
+  });
+  html += '<div class="note" style="margin-top:1rem"><span class="note-label">Game on!</span> May the best team win. There may or may not be a real trophy at stake.</div>';
+  return html;
+}
+function renderHotelAndMeals(){
   var h=DATA.hotel;
-  return '<div class="card card-highlight"><div class="card-name">'+h.name+'</div>'+
+  var html = '<div class="card card-highlight"><div class="card-name">'+h.name+'</div>'+
     '<div class="card-detail">\ud83d\udccd '+h.address+'</div>'+
     '<div class="card-detail">\ud83d\udcde '+h.phone+'</div>'+
-    '<div class="card-detail">\ud83d\udd11 Check-in: '+h.checkIn+' \u00b7 Check-out: '+h.checkOut+'</div>'+
+    '<div class="card-detail">\ud83d\udd11 Check-in: '+h.checkIn+'</div>'+
+    '<div class="card-detail">\ud83d\udd11 Check-out: '+h.checkOut+'</div>'+
     '<div class="card-detail">\ud83d\udcf6 WiFi: '+h.wifi+'</div>'+
-    (h.notes?'<div class="card-detail">\ud83d\udcdd '+h.notes+'</div>':'')+
+    (h.notes&&h.notes.indexOf('PLACEHOLDER')===-1?'<div class="card-detail">\ud83d\udcdd '+h.notes+'</div>':'')+
     '<div style="margin-top:0.5rem"><a href="'+h.mapLink+'" target="_blank" class="card-tag" style="text-decoration:none">\ud83d\udccd Open in Maps</a></div></div>';
-}
-function renderMeals(){
-  var h='<table class="meal-table"><thead><tr><th>Meal</th><th>Timing</th><th>Where</th></tr></thead><tbody>';
-  DATA.hotelMeals.forEach(function(m){h+='<tr><td>'+m.meal+'</td><td>'+m.time+'</td><td>'+m.location+'</td></tr>';});
-  return h+'</tbody></table><div class="note" style="margin-top:1rem"><span class="note-label">Just so you know:</span> These timings might shift a bit on wedding days. Check with the front desk if you\u2019re unsure.</div>';
+
+  html += '<div class="doodle-divider">~ \u2743 ~</div>';
+  html += '<div style="font-family:Caveat,cursive;font-size:1.4rem;font-weight:700;color:#4a3728;margin-bottom:0.3rem">\ud83c\udf7d\ufe0f Meal Timings</div>';
+  html += '<div style="font-family:Kalam,cursive;font-size:0.9rem;color:#8a7a6a;margin-bottom:0.8rem">All meals are served on the 2nd floor.</div>';
+
+  DATA.hotelMeals.forEach(function(day){
+    html += '<div class="card"><div class="card-name">'+day.day+'</div>';
+    html += '<table class="meal-table"><tbody>';
+    day.meals.forEach(function(m){
+      html += '<tr><td>'+m.meal+'</td><td>'+m.time+'</td></tr>';
+    });
+    html += '</tbody></table></div>';
+  });
+
+  html += '<div class="note"><span class="note-label">Just so you know:</span> These timings might shift a bit on wedding days. Check with the front desk if you\u2019re unsure.</div>';
+  return html;
 }
 function renderMetro(){
   return DATA.metro.map(function(m){
