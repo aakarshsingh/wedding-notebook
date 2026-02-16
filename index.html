@@ -434,14 +434,12 @@ var DATA = {
     ]}
   ],
   gurudwaraEtiquettes: [
-    { icon: "\ud83e\udde3", text: "Please cover your head inside the Gurudwara. There\u2019ll be scarves at the entrance if you need one." },
-    { icon: "\ud83d\udeab", text: "Shoes off before you go in \u2014 there\u2019s a counter where you can leave them." },
-    { icon: "\ud83c\udf77", text: "No alcohol or tobacco inside. Leave that for the after-party." },
-    { icon: "\ud83e\uddce", text: "You\u2019ll sit on the floor, cross-legged. Just don\u2019t point your feet at the Guru Granth Sahib." },
-    { icon: "\ud83e\udd2b", text: "It\u2019ll be quiet during the ceremony. The Anand Karaj is a sacred moment \u2014 soak it in." },
-    { icon: "\ud83d\ude4f", text: "When everyone stands for the Ardas (prayer), stand with them. You\u2019ll know when." },
+    { icon: "\ud83e\uddce", text: "Sitting in the Darbar Hall in the presence of Sri Guru Granth Sahib is on the floor \u2014 except for senior citizens and those who can\u2019t sit on the floor." },
+    { icon: "\ud83e\udde3", text: "Heads shall be covered at all times in the presence of Sri Guru Granth Sahib. Scarves are usually available at the entrance if you need one." },
+    { icon: "\ud83d\udcf5", text: "No talking or using phones when Recitation/Gurbani Vichar/Kirtan is in progress." },
+    { icon: "\ud83d\udeab", text: "No person shall come to the Gurdwara premises intoxicated." },
+    { icon: "\ud83d\udc5f", text: "Shoes off before you go in \u2014 there\u2019s a counter where you can leave them." },
     { icon: "\ud83c\udf5b", text: "Langar is the community meal \u2014 free, vegetarian, and open to all. Honestly, don\u2019t skip it." },
-    { icon: "\ud83d\udcf8", text: "Check before clicking photos. Some moments during the ceremony are camera-free." },
     { icon: "\ud83d\udc57", text: "Keep it modest \u2014 cover your shoulders and knees. Indian or western, both are fine." },
     { icon: "\ud83d\udeb6", text: "If you walk up to the Guru Granth Sahib, go clockwise around it." }
   ],
@@ -497,6 +495,13 @@ var DATA = {
     { name: "National Rail Museum", area: "Chanakyapuri (~20 min)", highlight: "Old trains, joy rides, and a surprisingly good time. Works whether you\u2019re 8 or 80.", mapLink: "https://maps.google.com/?q=National+Rail+Museum+Delhi" },
     { name: "Khan Market", area: "Central Delhi (~30 min)", highlight: "Bookshops, boutiques, good coffee. Delhi\u2019s version of a lazy afternoon well spent.", mapLink: "https://maps.google.com/?q=Khan+Market+Delhi" },
     { name: "Connaught Place (CP)", area: "Central Delhi (~25 min)", highlight: "The British built the arcades in the 1930s. After Partition, refugee families filled the corridors with shops and food. Now it\u2019s Delhi\u2019s living room.", mapLink: "https://maps.google.com/?q=Connaught+Place+Delhi" }
+  ],
+  hiddenGems: [
+    { name: "Sundar Nursery", area: "Nizamuddin (~35 min)", highlight: "Right next to Humayun\u2019s Tomb but most tourists miss it. Restored Mughal-era gardens, old tombs tucked between trees, a lovely cafe. Quiet, green, beautiful.", mapLink: "https://maps.google.com/?q=Sundar+Nursery+Delhi" },
+    { name: "Agrasen Ki Baoli", area: "CP / KG Marg (~25 min)", highlight: "A 700-year-old stepwell hiding in plain sight between office buildings. 108 steps going underground. Eerie, stunning, free.", mapLink: "https://maps.google.com/?q=Agrasen+Ki+Baoli+Delhi" },
+    { name: "Lodhi Art District", area: "Lodhi Colony (~30 min)", highlight: "An entire neighbourhood with massive street murals on every wall. Grab a coffee from the market and just walk around. Great for photos.", mapLink: "https://maps.google.com/?q=Lodhi+Art+District+Delhi" },
+    { name: "Nizamuddin Dargah", area: "Nizamuddin (~35 min)", highlight: "The shrine of Sufi saint Nizamuddin Auliya. Go on a Thursday evening for qawwali \u2014 live Sufi devotional music in the courtyard. Absolutely unforgettable.", mapLink: "https://maps.google.com/?q=Nizamuddin+Dargah+Delhi" },
+    { name: "Hauz Khas Village", area: "South Delhi (~35 min)", highlight: "Medieval ruins around a lake, surrounded by quirky cafes and boutiques. The deer park next door is oddly peaceful for being in the middle of the city.", mapLink: "https://maps.google.com/?q=Hauz+Khas+Village+Delhi" }
   ]
 };
 
@@ -590,7 +595,16 @@ function renderFood(){
   return html;
 }
 function renderSalons(){return renderPlaceCards(DATA.beautySalons)+'<div class="note"><span class="note-label">Heads up:</span> If you need wedding-day makeup or a blowout, book the evening before. Morning slots go fast.</div>'}
-function renderMustDo(){return '<div style="font-family:Kalam,cursive;font-size:0.9rem;color:#8a7a6a;margin-bottom:1rem;line-height:1.6">Delhi has been built, destroyed, and rebuilt seven times. Every part of the city is standing on top of something older. Here are a few places worth seeing between all the wedding chaos.</div>' + renderPlaceCards(DATA.mustDo,false)+'<div class="note"><span class="note-label">Getting around:</span> Metro is the fastest way to most of these. Uber and Ola work well too. And if you haven\u2019t sat in a Delhi auto-rickshaw yet... you should, at least once.</div>'}
+function renderMustDo(){
+  var html = '<div style="font-family:Kalam,cursive;font-size:0.9rem;color:#8a7a6a;margin-bottom:1rem;line-height:1.6">Delhi has been built, destroyed, and rebuilt seven times. Every part of the city is standing on top of something older. Here are a few places worth seeing between all the wedding chaos.</div>';
+  html += renderPlaceCards(DATA.mustDo,false);
+  html += '<div class="doodle-divider">~ \u2743 ~</div>';
+  html += '<div style="font-family:Caveat,cursive;font-size:1.4rem;font-weight:700;color:#4a3728;margin-bottom:0.3rem">\ud83d\udc8e Hidden Gems</div>';
+  html += '<div style="font-family:Kalam,cursive;font-size:0.9rem;color:#8a7a6a;margin-bottom:0.8rem;line-height:1.6">The stuff that won\u2019t show up on a top-10 list but will probably be the thing you remember most.</div>';
+  html += renderPlaceCards(DATA.hiddenGems,false);
+  html += '<div class="note"><span class="note-label">Getting around:</span> Metro is the fastest way to most of these. Uber and Ola work well too. And if you haven\u2019t sat in a Delhi auto-rickshaw yet... you should, at least once.</div>';
+  return html;
+}
 
 function renderLastPage(){
   var rules = [
