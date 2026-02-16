@@ -727,6 +727,37 @@ function buildSections(){
 
 buildIndex();
 buildSections();
+
+// Swipe navigation
+var touchStartX = 0;
+var touchStartY = 0;
+var touchEndX = 0;
+var touchEndY = 0;
+var minSwipe = 60;
+
+document.addEventListener('touchstart', function(e){
+  touchStartX = e.changedTouches[0].screenX;
+  touchStartY = e.changedTouches[0].screenY;
+}, {passive: true});
+
+document.addEventListener('touchend', function(e){
+  touchEndX = e.changedTouches[0].screenX;
+  touchEndY = e.changedTouches[0].screenY;
+  var dx = touchEndX - touchStartX;
+  var dy = touchEndY - touchStartY;
+  // Only trigger if horizontal swipe is dominant
+  if(Math.abs(dx) < minSwipe || Math.abs(dy) > Math.abs(dx)) return;
+  var allIds = ['index'].concat(SECTIONS.map(function(s){return s.id}));
+  var idx = allIds.indexOf(currentPage);
+  if(idx === -1) return;
+  if(dx < 0 && idx < allIds.length - 1){
+    // Swipe left → next page
+    navigateTo(allIds[idx + 1]);
+  } else if(dx > 0 && idx > 0){
+    // Swipe right → prev page
+    navigateTo(allIds[idx - 1]);
+  }
+}, {passive: true});
 </script>
 </body>
 </html>
