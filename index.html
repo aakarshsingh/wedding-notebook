@@ -482,11 +482,10 @@ var DATA = {
     { name: "DDA Market, C-Block", distance: "5 min walk", highlight: "Another small neighbourhood market. Stationery, daily stuff, a chemist if you need one.", mapLink: "https://maps.google.com/?q=DDA+Market+Naraina+Vihar" }
   ],
   beautySalons: [
-    { name: "Salon9teen", distance: "3 min walk", rating: "4.9", hours: "10 AM \u2013 9 PM daily", highlight: "Really good and really close. Satish knows what he\u2019s doing. Haircuts, colour, makeup \u2014 the works.", mapLink: "https://maps.google.com/?q=Salon9teen+Naraina+Vihar", phone: "PLACEHOLDER" },
-    { name: "Varun Attri Unisex Salon", distance: "5 min walk", rating: "4.7", hours: "9:30 AM \u2013 10 PM daily", highlight: "Popular spot, especially for hair treatments. They also do bridal makeup if you need a touch-up.", mapLink: "https://maps.google.com/?q=Varun+Attri+Salon+Naraina", phone: "PLACEHOLDER" },
-    { name: "Geetanjali Studio", distance: "5 min walk", rating: "4.5", hours: "10 AM \u2013 9 PM daily", highlight: "Chain salon, so you know what you\u2019re getting. Spa, waxing, hair \u2014 reliable and clean.", mapLink: "https://maps.google.com/?q=Geetanjali+Studio+Naraina", phone: "PLACEHOLDER" },
-    { name: "CUT&STYLE Salon", distance: "4 min walk", rating: "4.7", hours: "10 AM \u2013 9 PM daily", highlight: "Newer place, surprisingly good. The head massages have fans. Mani-pedi game is strong.", mapLink: "https://maps.google.com/?q=Cut+Style+Salon+Naraina+Vihar", phone: "PLACEHOLDER" },
-    { name: "Nick\u2019s Salon", distance: "3 min walk", rating: "4.7", hours: "10 AM \u2013 9 PM (Closed Tuesdays)", highlight: "Smoothing, colour, facials. Closed Tuesdays though, so plan around that.", mapLink: "https://maps.google.com/?q=Nicks+Salon+Naraina", phone: "PLACEHOLDER" }
+    { name: "Geetanjali Salon", distance: "5 min walk", rating: "4.5", hours: "10:00 am \u2013 9:00 pm daily", highlight: "", mapLink: "https://share.google/OAEX13Ay4hS6f8rau", phone: "" },
+    { name: "Nick\u2019s Salon \u2013 Makeup Studio & Academy", distance: "3 min walk", rating: "4.7", hours: "10:00 am \u2013 9:00 pm (Closed Tuesdays)", highlight: "", mapLink: "https://maps.app.goo.gl/CzTZeBwad1KHEech9", phone: "" },
+    { name: "The Balayage \u2013 Unisex Salon", distance: "2 min walk", rating: "4.6", hours: "10:00 am \u2013 9:00 pm daily", highlight: "", mapLink: "https://maps.app.goo.gl/FVrqtjkbopW6enJf7", phone: "" },
+    { name: "CUT&STYLE Salon", distance: "4 min walk", rating: "4.7", hours: "10:00 am \u2013 9:00 pm daily", highlight: "", mapLink: "https://maps.google.com/?q=Cut+Style+Salon+Naraina+Vihar", phone: "" }
   ],
   mustEat: [
     { name: "Bukhara (ITC Maurya)", type: "Fine Dining", area: "Dhaula Kuan (Airport Line)", highlight: "Frontier-style cooking. The Dal Bukhara alone is worth the trip. Book ahead, it fills up.", mapLink: "https://maps.google.com/?q=Bukhara+ITC+Maurya" },
@@ -625,8 +624,8 @@ function renderPlaceCards(items,showRating){
       (p.distance?'<div class="card-tag">' + METRO_ICON + ' ' +p.distance+'</div>':'')+
       (showRating&&p.rating?'<div class="card-rating" style="margin-top:0.3rem">\u2605 '+p.rating+'</div>':'')+
       (p.hours?'<div class="card-detail" style="margin-top:0.3rem">\ud83d\udd50 '+p.hours+'</div>':'')+
-      '<div class="card-detail" style="margin-top:0.3rem">'+p.highlight+'</div>'+
-      (p.phone&&p.phone.indexOf('PLACEHOLDER')===-1?'<div class="card-detail">\ud83d\udcde '+p.phone+'</div>':'')+
+      (p.highlight?'<div class="card-detail" style="margin-top:0.3rem">'+p.highlight+'</div>':'')+
+      (p.phone&&p.phone.length>0?'<div class="card-detail">\ud83d\udcde '+p.phone+'</div>':'')+
       (p.mapLink?'<a href="'+p.mapLink+'" target="_blank" class="card-tag" style="text-decoration:none;margin-top:0.3rem;display:inline-block">\ud83d\udccd Maps</a>':'')+
       '</div>';
   }).join('');
@@ -643,7 +642,7 @@ function renderFood(){
   html += '<div class="note"><span class="note-label">Honestly?</span> Just walk through Chandni Chowk with an empty stomach and eat whatever smells best. You can\u2019t really go wrong.</div>';
   return html;
 }
-function renderSalons(){return renderPlaceCards(DATA.beautySalons)+'<div class="note"><span class="note-label">Heads up:</span> If you need wedding-day makeup or a blowout, book the evening before. Morning slots go fast.</div>'}
+function renderSalons(){return renderPlaceCards(DATA.beautySalons)}
 function renderMustDo(){
   var html = '<div style="font-family:Kalam,cursive;font-size:0.9rem;color:#8a7a6a;margin-bottom:1rem;line-height:1.6">Delhi has been built, destroyed, and rebuilt seven times. Every part of the city is standing on top of something older. Here are a few places worth seeing between all the wedding chaos.</div>';
   html += renderPlaceCards(DATA.mustDo,false);
